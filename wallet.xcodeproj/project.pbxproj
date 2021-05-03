@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF615480264088900070410C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61547F264088900070410C /* LoginView.swift */; };
+		AF615485264089230070410C /* CreateWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF615484264089230070410C /* CreateWalletView.swift */; };
+		AF6154922640898B0070410C /* RecoverWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6154912640898B0070410C /* RecoverWalletView.swift */; };
 		AFF6FC462640845900B80F5A /* walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC452640845900B80F5A /* walletApp.swift */; };
 		AFF6FC482640845900B80F5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC472640845900B80F5A /* ContentView.swift */; };
 		AFF6FC4A2640845B00B80F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF6FC492640845B00B80F5A /* Assets.xcassets */; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF61547F264088900070410C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AF615484264089230070410C /* CreateWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletView.swift; sourceTree = "<group>"; };
+		AF6154912640898B0070410C /* RecoverWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverWalletView.swift; sourceTree = "<group>"; };
 		AFF6FC422640845900B80F5A /* wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF6FC452640845900B80F5A /* walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletApp.swift; sourceTree = "<group>"; };
 		AFF6FC472640845900B80F5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				AFF6FC472640845900B80F5A /* ContentView.swift */,
+				AF61547F264088900070410C /* LoginView.swift */,
+				AF615484264089230070410C /* CreateWalletView.swift */,
+				AF6154912640898B0070410C /* RecoverWalletView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,8 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF615480264088900070410C /* LoginView.swift in Sources */,
+				AF615485264089230070410C /* CreateWalletView.swift in Sources */,
 				AFF6FC482640845900B80F5A /* ContentView.swift in Sources */,
 				AFF6FC462640845900B80F5A /* walletApp.swift in Sources */,
+				AF6154922640898B0070410C /* RecoverWalletView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
