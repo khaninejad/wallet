@@ -1,2 +1,1 @@
-- name: iOS Build Action
-  uses: yukiarrr/ios-build-action@v1.4.0
+- uses: yukiarrr/ios-build-action@v1.4.0
