@@ -14,7 +14,7 @@ struct LoginView: View {
             
             Spacer()
             
-            Image(systemName: "bitcoinsign.circle.fill")
+            Image(systemName: "z.circle.fill")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 100.0, height: 100.0, alignment: .center)
