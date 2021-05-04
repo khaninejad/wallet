@@ -1,0 +1,6 @@
+framework module BIP39 {
+  umbrella header "BIP39-umbrella.h"
+
+  export *
+  module * { export * }
+}

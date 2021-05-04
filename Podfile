@@ -6,6 +6,7 @@ target 'wallet' do
   use_frameworks!
 
   # Pods for wallet
+  pod 'BIP39'
 
   target 'walletTests' do
     inherit! :search_paths

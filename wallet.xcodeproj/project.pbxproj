@@ -15,6 +15,7 @@
 		AF990C61264164B400DF8730 /* bls-eth-swift in Frameworks */ = {isa = PBXBuildFile; productRef = AF990C60264164B400DF8730 /* bls-eth-swift */; };
 		AF990C662641650A00DF8730 /* BLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF990C652641650A00DF8730 /* BLS.swift */; };
 		AF990C6C26416E5F00DF8730 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF990C6B26416E5F00DF8730 /* CryptoSwift */; };
+		AFBFD9D82641E25F004A8D86 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFD9D72641E25F004A8D86 /* Mnemonic.swift */; };
 		AFF6FC462640845900B80F5A /* walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC452640845900B80F5A /* walletApp.swift */; };
 		AFF6FC482640845900B80F5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC472640845900B80F5A /* ContentView.swift */; };
 		AFF6FC4A2640845B00B80F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF6FC492640845B00B80F5A /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		AF615484264089230070410C /* CreateWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletView.swift; sourceTree = "<group>"; };
 		AF6154912640898B0070410C /* RecoverWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverWalletView.swift; sourceTree = "<group>"; };
 		AF990C652641650A00DF8730 /* BLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLS.swift; sourceTree = "<group>"; };
+		AFBFD9D72641E25F004A8D86 /* Mnemonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
 		AFF6FC422640845900B80F5A /* wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF6FC452640845900B80F5A /* walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletApp.swift; sourceTree = "<group>"; };
 		AFF6FC472640845900B80F5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				AF990C652641650A00DF8730 /* BLS.swift */,
+				AFBFD9D72641E25F004A8D86 /* Mnemonic.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				AFF6FC3E2640845900B80F5A /* Sources */,
 				AFF6FC3F2640845900B80F5A /* Frameworks */,
 				AFF6FC402640845900B80F5A /* Resources */,
+				5E68EEFA6A51ED2ED8305C24 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,6 +274,7 @@
 				AFF6FC5A2640845B00B80F5A /* Sources */,
 				AFF6FC5B2640845B00B80F5A /* Frameworks */,
 				AFF6FC5C2640845B00B80F5A /* Resources */,
+				886B457904842D7507CF464F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -420,6 +425,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5E68EEFA6A51ED2ED8305C24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wallet/Pods-wallet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wallet/Pods-wallet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wallet/Pods-wallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		886B457904842D7507CF464F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wallet-walletUITests/Pods-wallet-walletUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wallet-walletUITests/Pods-wallet-walletUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wallet-walletUITests/Pods-wallet-walletUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -431,6 +470,7 @@
 				AF990C662641650A00DF8730 /* BLS.swift in Sources */,
 				AF615485264089230070410C /* CreateWalletView.swift in Sources */,
 				AFF6FC482640845900B80F5A /* ContentView.swift in Sources */,
+				AFBFD9D82641E25F004A8D86 /* Mnemonic.swift in Sources */,
 				AFF6FC462640845900B80F5A /* walletApp.swift in Sources */,
 				AF6154922640898B0070410C /* RecoverWalletView.swift in Sources */,
 			);

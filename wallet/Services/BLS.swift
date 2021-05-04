@@ -32,7 +32,8 @@ class BLS {
         let SECRET_KEY_SIZE = 32
         var secretKeyBytes = Data(count: SECRET_KEY_SIZE).bytes // [UInt8]
         blsSecretKeySerialize(&secretKeyBytes, SECRET_KEY_SIZE, &sec)
-        print(Data(secretKeyBytes).hexEncodedString())
+        let secretString = Data(secretKeyBytes).hexEncodedString()
+        print(secretString)
 
  
         
@@ -43,6 +44,12 @@ class BLS {
         var publicKeyBytes = Data(count: PUBLIC_KEY_SIZE).bytes // [UInt8]
         blsPublicKeySerialize(&publicKeyBytes, PUBLIC_KEY_SIZE, &pub)
         print(Data(publicKeyBytes).hexEncodedString())
+        
+        let mem = Mnemonic()
+        let words =   mem.GenerateMnemonic(hex: secretString)
+        let secretRecover =    mem.GenerateSecretFromMnemonic(words: words)
+        print(words)
+        print(secretRecover)
         
 
 
