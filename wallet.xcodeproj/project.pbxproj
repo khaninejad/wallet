@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		83B37A0FE33036275E7AFD00 /* Pods_wallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ECC3636D4794E596A2DAD6 /* Pods_wallet.framework */; };
 		9B6B1DDCE9D7CA68C84F3EA7 /* Pods_walletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072AFC0536BAEF726161A0E2 /* Pods_walletTests.framework */; };
+		AF0AF4562642E066007E5202 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AF4552642E066007E5202 /* Address.swift */; };
+		AF0AF46126432018007E5202 /* Bech32.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AF46026432018007E5202 /* Bech32.swift */; };
+		AF0AF466264321F0007E5202 /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AF465264321F0007E5202 /* RIPEMD160.swift */; };
 		AF615480264088900070410C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61547F264088900070410C /* LoginView.swift */; };
 		AF615485264089230070410C /* CreateWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF615484264089230070410C /* CreateWalletView.swift */; };
 		AF6154922640898B0070410C /* RecoverWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6154912640898B0070410C /* RecoverWalletView.swift */; };
@@ -50,6 +53,9 @@
 		2619664B121F5FCEDD2D779A /* Pods-walletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walletTests.release.xcconfig"; path = "Target Support Files/Pods-walletTests/Pods-walletTests.release.xcconfig"; sourceTree = "<group>"; };
 		4147F1FB5F48DB8F1C7FEFBC /* Pods-wallet-walletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallet-walletUITests.release.xcconfig"; path = "Target Support Files/Pods-wallet-walletUITests/Pods-wallet-walletUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E3F2C077730D5CC18E37146 /* Pods-wallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallet.release.xcconfig"; path = "Target Support Files/Pods-wallet/Pods-wallet.release.xcconfig"; sourceTree = "<group>"; };
+		AF0AF4552642E066007E5202 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		AF0AF46026432018007E5202 /* Bech32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bech32.swift; sourceTree = "<group>"; };
+		AF0AF465264321F0007E5202 /* RIPEMD160.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIPEMD160.swift; sourceTree = "<group>"; };
 		AF61547F264088900070410C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AF615484264089230070410C /* CreateWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletView.swift; sourceTree = "<group>"; };
 		AF6154912640898B0070410C /* RecoverWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverWalletView.swift; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 			children = (
 				AF990C652641650A00DF8730 /* BLS.swift */,
 				AFBFD9D72641E25F004A8D86 /* Mnemonic.swift */,
+				AF0AF4552642E066007E5202 /* Address.swift */,
+				AF0AF46026432018007E5202 /* Bech32.swift */,
+				AF0AF465264321F0007E5202 /* RIPEMD160.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -466,13 +475,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0AF466264321F0007E5202 /* RIPEMD160.swift in Sources */,
 				AF615480264088900070410C /* LoginView.swift in Sources */,
 				AF990C662641650A00DF8730 /* BLS.swift in Sources */,
 				AF615485264089230070410C /* CreateWalletView.swift in Sources */,
 				AFF6FC482640845900B80F5A /* ContentView.swift in Sources */,
 				AFBFD9D82641E25F004A8D86 /* Mnemonic.swift in Sources */,
 				AFF6FC462640845900B80F5A /* walletApp.swift in Sources */,
+				AF0AF4562642E066007E5202 /* Address.swift in Sources */,
 				AF6154922640898B0070410C /* RecoverWalletView.swift in Sources */,
+				AF0AF46126432018007E5202 /* Bech32.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
