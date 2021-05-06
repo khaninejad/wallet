@@ -48,7 +48,7 @@ class BLS {
     }
     func GenerateMnemonic(input: String ) -> [String] {
         let mem = Mnemonic()
-        return   mem.GenerateMnemonic(hex: input)
+        return  try! mem.GenerateMnemonic(hex: input)
     }
     func GenerateKeys()  {     
        var sec = GenerateSecretKey()

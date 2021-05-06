@@ -9,7 +9,7 @@ import XCTest
 
 class extentionTests: XCTestCase {
 
-    func testInt64ToByte() {
+    func testStringToHex() {
        let testHex = "123".data(using: .utf8)!
         
         XCTAssertNotNil(testHex.toHexString())

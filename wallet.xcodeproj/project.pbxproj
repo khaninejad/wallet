@@ -25,6 +25,7 @@
 		AFDDB9372644772200565346 /* cryptoGraphyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB9362644772200565346 /* cryptoGraphyTests.swift */; };
 		AFDDB93C26447FCE00565346 /* extentionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB93B26447FCE00565346 /* extentionTests.swift */; };
 		AFDDB9422644800E00565346 /* Ext+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB9412644800E00565346 /* Ext+Data.swift */; };
+		AFDDB95F2644849D00565346 /* MnemonicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB95E2644849D00565346 /* MnemonicTests.swift */; };
 		AFF6FC462640845900B80F5A /* walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC452640845900B80F5A /* walletApp.swift */; };
 		AFF6FC482640845900B80F5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC472640845900B80F5A /* ContentView.swift */; };
 		AFF6FC4A2640845B00B80F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF6FC492640845B00B80F5A /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		AFDDB9362644772200565346 /* cryptoGraphyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoGraphyTests.swift; sourceTree = "<group>"; };
 		AFDDB93B26447FCE00565346 /* extentionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extentionTests.swift; sourceTree = "<group>"; };
 		AFDDB9412644800E00565346 /* Ext+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Data.swift"; sourceTree = "<group>"; };
+		AFDDB95E2644849D00565346 /* MnemonicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicTests.swift; sourceTree = "<group>"; };
 		AFF6FC422640845900B80F5A /* wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF6FC452640845900B80F5A /* walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletApp.swift; sourceTree = "<group>"; };
 		AFF6FC472640845900B80F5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				AFF6FC592640845B00B80F5A /* Info.plist */,
 				AFDDB9362644772200565346 /* cryptoGraphyTests.swift */,
 				AFDDB93B26447FCE00565346 /* extentionTests.swift */,
+				AFDDB95E2644849D00565346 /* MnemonicTests.swift */,
 			);
 			path = walletTests;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				AFDDB93C26447FCE00565346 /* extentionTests.swift in Sources */,
 				AFF6FC582640845B00B80F5A /* walletTests.swift in Sources */,
 				AFDDB9372644772200565346 /* cryptoGraphyTests.swift in Sources */,
+				AFDDB95F2644849D00565346 /* MnemonicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
