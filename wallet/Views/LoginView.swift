@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    
     var body: some View {
         NavigationView {
         VStack{
@@ -19,7 +20,6 @@ struct LoginView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 100.0, height: 100.0, alignment: .center)
                 .clipShape(Circle())
-             //   .background(Color.blue)
                 .foregroundColor(.blue)
             Text("Zarb Coin")
             Spacer()

@@ -8,8 +8,38 @@
 import SwiftUI
 
 struct CreateWalletView: View {
+    @ObservedObject private var walletVM = WalletViewModel()
+
     var body: some View {
-        Text("Create a wallet View!")
+        VStack {
+            Text("Save these words in safe place!")
+            
+            List {
+                ForEach(self.walletVM.keys.mnemonicWords, id: \.self) { item in
+                    Text(item)
+                    
+                    }
+                }
+            
+        }
+        .onAppear {
+            walletVM.Generate()
+        }
+        
+        Button(action: {
+           
+        }, label: {
+            NavigationLink(destination: DashboardView()) {
+                 Text("Take me to the Zarb Wallet")
+             }
+        }).accessibility(identifier: "gotoZarbAWallet")
+            .padding()
+            .background(Color.purple)
+            .foregroundColor(.white)
+            .cornerRadius(50)
+        
+        
+          
     }
 }
 

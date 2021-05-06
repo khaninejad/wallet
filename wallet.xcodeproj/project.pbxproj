@@ -19,6 +19,9 @@
 		AF990C662641650A00DF8730 /* BLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF990C652641650A00DF8730 /* BLS.swift */; };
 		AF990C6C26416E5F00DF8730 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF990C6B26416E5F00DF8730 /* CryptoSwift */; };
 		AFBFD9D82641E25F004A8D86 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFD9D72641E25F004A8D86 /* Mnemonic.swift */; };
+		AFDDB9202644650E00565346 /* UserLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB91F2644650E00565346 /* UserLoginViewModel.swift */; };
+		AFDDB9252644677200565346 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB9242644677200565346 /* WalletViewModel.swift */; };
+		AFDDB9322644709100565346 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB9312644709100565346 /* DashboardView.swift */; };
 		AFF6FC462640845900B80F5A /* walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC452640845900B80F5A /* walletApp.swift */; };
 		AFF6FC482640845900B80F5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC472640845900B80F5A /* ContentView.swift */; };
 		AFF6FC4A2640845B00B80F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF6FC492640845B00B80F5A /* Assets.xcassets */; };
@@ -61,6 +64,9 @@
 		AF6154912640898B0070410C /* RecoverWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverWalletView.swift; sourceTree = "<group>"; };
 		AF990C652641650A00DF8730 /* BLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLS.swift; sourceTree = "<group>"; };
 		AFBFD9D72641E25F004A8D86 /* Mnemonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
+		AFDDB91F2644650E00565346 /* UserLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewModel.swift; sourceTree = "<group>"; };
+		AFDDB9242644677200565346 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
+		AFDDB9312644709100565346 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		AFF6FC422640845900B80F5A /* wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF6FC452640845900B80F5A /* walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletApp.swift; sourceTree = "<group>"; };
 		AFF6FC472640845900B80F5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 				AF61547F264088900070410C /* LoginView.swift */,
 				AF615484264089230070410C /* CreateWalletView.swift */,
 				AF6154912640898B0070410C /* RecoverWalletView.swift */,
+				AFDDB9312644709100565346 /* DashboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 		AF61547B264087D50070410C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AFDDB91F2644650E00565346 /* UserLoginViewModel.swift */,
+				AFDDB9242644677200565346 /* WalletViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -476,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0AF466264321F0007E5202 /* RIPEMD160.swift in Sources */,
+				AFDDB9202644650E00565346 /* UserLoginViewModel.swift in Sources */,
 				AF615480264088900070410C /* LoginView.swift in Sources */,
 				AF990C662641650A00DF8730 /* BLS.swift in Sources */,
 				AF615485264089230070410C /* CreateWalletView.swift in Sources */,
@@ -483,7 +493,9 @@
 				AFBFD9D82641E25F004A8D86 /* Mnemonic.swift in Sources */,
 				AFF6FC462640845900B80F5A /* walletApp.swift in Sources */,
 				AF0AF4562642E066007E5202 /* Address.swift in Sources */,
+				AFDDB9252644677200565346 /* WalletViewModel.swift in Sources */,
 				AF6154922640898B0070410C /* RecoverWalletView.swift in Sources */,
+				AFDDB9322644709100565346 /* DashboardView.swift in Sources */,
 				AF0AF46126432018007E5202 /* Bech32.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject private var userLoginVM = UserLoginViewModel()
+   
     init() {
-        var test = BLS()
-        test.GetKeys()
+        if (userLoginVM.loginState){
+            
+        }
     }
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+      return  LoginView()
     }
 }
 
