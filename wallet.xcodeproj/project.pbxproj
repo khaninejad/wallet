@@ -23,6 +23,8 @@
 		AFDDB9252644677200565346 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB9242644677200565346 /* WalletViewModel.swift */; };
 		AFDDB9322644709100565346 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB9312644709100565346 /* DashboardView.swift */; };
 		AFDDB9372644772200565346 /* cryptoGraphyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB9362644772200565346 /* cryptoGraphyTests.swift */; };
+		AFDDB93C26447FCE00565346 /* extentionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB93B26447FCE00565346 /* extentionTests.swift */; };
+		AFDDB9422644800E00565346 /* Ext+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB9412644800E00565346 /* Ext+Data.swift */; };
 		AFF6FC462640845900B80F5A /* walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC452640845900B80F5A /* walletApp.swift */; };
 		AFF6FC482640845900B80F5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC472640845900B80F5A /* ContentView.swift */; };
 		AFF6FC4A2640845B00B80F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF6FC492640845B00B80F5A /* Assets.xcassets */; };
@@ -69,6 +71,8 @@
 		AFDDB9242644677200565346 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		AFDDB9312644709100565346 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		AFDDB9362644772200565346 /* cryptoGraphyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoGraphyTests.swift; sourceTree = "<group>"; };
+		AFDDB93B26447FCE00565346 /* extentionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extentionTests.swift; sourceTree = "<group>"; };
+		AFDDB9412644800E00565346 /* Ext+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Data.swift"; sourceTree = "<group>"; };
 		AFF6FC422640845900B80F5A /* wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF6FC452640845900B80F5A /* walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletApp.swift; sourceTree = "<group>"; };
 		AFF6FC472640845900B80F5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 		AF615479264087BD0070410C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AFDDB94026447FFD00565346 /* Ext */,
 				AF990C652641650A00DF8730 /* BLS.swift */,
 				AFBFD9D72641E25F004A8D86 /* Mnemonic.swift */,
 				AF0AF4552642E066007E5202 /* Address.swift */,
@@ -176,6 +181,14 @@
 				072AFC0536BAEF726161A0E2 /* Pods_walletTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFDDB94026447FFD00565346 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				AFDDB9412644800E00565346 /* Ext+Data.swift */,
+			);
+			path = Ext;
 			sourceTree = "<group>";
 		};
 		AFF6FC392640845900B80F5A = {
@@ -229,6 +242,7 @@
 				AFF6FC572640845B00B80F5A /* walletTests.swift */,
 				AFF6FC592640845B00B80F5A /* Info.plist */,
 				AFDDB9362644772200565346 /* cryptoGraphyTests.swift */,
+				AFDDB93B26447FCE00565346 /* extentionTests.swift */,
 			);
 			path = walletTests;
 			sourceTree = "<group>";
@@ -500,6 +514,7 @@
 				AF6154922640898B0070410C /* RecoverWalletView.swift in Sources */,
 				AFDDB9322644709100565346 /* DashboardView.swift in Sources */,
 				AF0AF46126432018007E5202 /* Bech32.swift in Sources */,
+				AFDDB9422644800E00565346 /* Ext+Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDDB93C26447FCE00565346 /* extentionTests.swift in Sources */,
 				AFF6FC582640845B00B80F5A /* walletTests.swift in Sources */,
 				AFDDB9372644772200565346 /* cryptoGraphyTests.swift in Sources */,
 			);
