@@ -11,34 +11,32 @@ import CryptoKit
 
 class Address {
     
-    
+    func GenerateSHA256(input: String) -> Data {
+        
+        guard let data = input.data(using: .utf8) else { return Data.init()}
+        return SHA256.hash(data: data).data
+    }
     
     func GenerateAddress(publicAddress : String){
-        guard let data = publicAddress.data(using: .utf8) else { return }
-        let digest = SHA256.hash(data: data)
-        print(digest.data) // 32 bytes
-        print(digest.hexStr) // B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9
-        GenerateHash160(hash256: digest.hexStr)
-    }
-    func GenerateHash160(hash256: String){
         
-        let hash = RIPEMD160.hash(message: hash256).hexEncodedString()
-        print(hash) // a830d7beb04eb7549ce990fb7dc962e499a27230
-        GenerateBech32(hex: hash)
+        let digest = GenerateSHA256(input: publicAddress)
+        
+        print(digest.hexEncodedString()) // B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9
+       let hash160 = GenerateHash160(hash256: digest.hexEncodedString())
+        GenerateBech32(hex: hash160, hrp: "zrb")
     }
-    func GenerateBech32(hex: String){
+    func GenerateHash160(hash256: String) -> Data{
+        let hash = RIPEMD160.hash(message: hash256)
+        return hash
+       
+    }
+    func GenerateBech32(hex: Data, hrp: String) -> String{
         
         do {
-            //            let bech32 = Bech32()
-            //            let (_, checksum) = try! bech32.
-            //            var ddd = try! bech32.convertBits(from: 5, to: 8, pad: false, idata: checksum).bytes
             let bech32 = Bech32()
-            let grouped = try! bech32.convertBits(from: 8, to: 5, pad: true, idata: Data(bytes: hex.bytes, count: 20))
-            var ttss = bech32.encode("zrb", values: grouped)
-            print(ttss)
-        } catch {
-            
-        }
+            let grouped = try! bech32.convertBits(from: 8, to: 5, pad: true, idata: hex)
+            return bech32.encode("zrb", values: grouped)
+        } 
     }
     
     
