@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../work/bls-eth-swift/bls_framework/bls_framework.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:wallet.xcodeproj">
    </FileRef>
    <FileRef
