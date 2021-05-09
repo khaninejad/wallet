@@ -7,7 +7,7 @@
 	http://opensource.org/licenses/BSD-3-Clause
 */
 #define MCLBN_NO_AUTOLINK
-#include <mcl/bn.h>
+#include "bn.h"
 
 #ifdef BLS_ETH
 	#define BLS_COMPILER_TIME_VAR_ADJ 200

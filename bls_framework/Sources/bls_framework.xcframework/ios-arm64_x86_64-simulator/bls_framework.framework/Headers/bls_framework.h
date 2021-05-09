@@ -20,4 +20,3 @@ FOUNDATION_EXPORT const unsigned char bls_frameworkVersionString[];
 #import <bls_framework/BLSInterface.h>
 #import <bls_framework/bn_c384_256.h>
 #import <bls_framework/bls.h>
-#import <bls_framework/bls256.h>

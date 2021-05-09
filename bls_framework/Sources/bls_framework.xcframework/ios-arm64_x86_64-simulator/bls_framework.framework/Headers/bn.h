@@ -110,7 +110,7 @@ typedef struct {
 
 #endif
 
-#include <mcl/curve_type.h>
+#include "curve_type.h"
 
 #define MCLBN_IO_EC_AFFINE 0
 #define MCLBN_IO_EC_PROJ 1024
