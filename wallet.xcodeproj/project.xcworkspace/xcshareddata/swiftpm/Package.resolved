@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "bls-eth-swift",
-        "repositoryURL": "https://github.com/MyEtherWallet/bls-eth-swift.git",
-        "state": {
-          "branch": null,
-          "revision": "fa35ea01addaa074267ce65a6ed21ad1d79b01fa",
-          "version": "1.0.0"
-        }
-      },
-      {
         "package": "CryptoSwift",
         "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
         "state": {

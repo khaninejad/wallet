@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EC7E40D0D2A3E0F2FBE6007E837F40E2"
-               BuildableName = "BIP39.framework"
-               BlueprintName = "BIP39"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "AFF6FC412640845900B80F5A"
+               BuildableName = "wallet.app"
+               BlueprintName = "wallet"
+               ReferencedContainer = "container:wallet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,6 +40,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AFF6FC412640845900B80F5A"
+            BuildableName = "wallet.app"
+            BlueprintName = "wallet"
+            ReferencedContainer = "container:wallet.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -47,6 +57,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AFF6FC412640845900B80F5A"
+            BuildableName = "wallet.app"
+            BlueprintName = "wallet"
+            ReferencedContainer = "container:wallet.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
