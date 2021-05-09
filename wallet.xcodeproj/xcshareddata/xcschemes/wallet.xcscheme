@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AFF6FC522640845B00B80F5A"
+               BuildableName = "walletTests.xctest"
+               BlueprintName = "walletTests"
+               ReferencedContainer = "container:wallet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AFF6FC5D2640845B00B80F5A"
+               BuildableName = "walletUITests.xctest"
+               BlueprintName = "walletUITests"
+               ReferencedContainer = "container:wallet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
