@@ -7,6 +7,7 @@ target 'wallet' do
 
   # Pods for wallet
   pod 'BIP39'
+  pod 'SwiftKeychainWrapper'
 
   target 'walletTests' do
     inherit! :search_paths

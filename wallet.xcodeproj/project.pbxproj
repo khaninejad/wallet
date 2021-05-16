@@ -18,6 +18,8 @@
 		AF6154922640898B0070410C /* RecoverWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6154912640898B0070410C /* RecoverWalletView.swift */; };
 		AF990C662641650A00DF8730 /* BLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF990C652641650A00DF8730 /* BLS.swift */; };
 		AF990C6C26416E5F00DF8730 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF990C6B26416E5F00DF8730 /* CryptoSwift */; };
+		AFB582882651B49B00E1567C /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB582872651B49B00E1567C /* KeychainWrapper.swift */; };
+		AFB582912651B5E800E1567C /* keychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB582902651B5E800E1567C /* keychainTests.swift */; };
 		AFBFD9D82641E25F004A8D86 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFD9D72641E25F004A8D86 /* Mnemonic.swift */; };
 		AFDDB9202644650E00565346 /* UserLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB91F2644650E00565346 /* UserLoginViewModel.swift */; };
 		AFDDB9252644677200565346 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDB9242644677200565346 /* WalletViewModel.swift */; };
@@ -80,6 +82,8 @@
 		AF615484264089230070410C /* CreateWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletView.swift; sourceTree = "<group>"; };
 		AF6154912640898B0070410C /* RecoverWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverWalletView.swift; sourceTree = "<group>"; };
 		AF990C652641650A00DF8730 /* BLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLS.swift; sourceTree = "<group>"; };
+		AFB582872651B49B00E1567C /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		AFB582902651B5E800E1567C /* keychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keychainTests.swift; sourceTree = "<group>"; };
 		AFBFD9D72641E25F004A8D86 /* Mnemonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
 		AFDDB91F2644650E00565346 /* UserLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewModel.swift; sourceTree = "<group>"; };
 		AFDDB9242644677200565346 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 				AF0AF4552642E066007E5202 /* Address.swift */,
 				AF0AF46026432018007E5202 /* Bech32.swift */,
 				AF0AF465264321F0007E5202 /* RIPEMD160.swift */,
+				AFB582872651B49B00E1567C /* KeychainWrapper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				AFDDB9362644772200565346 /* cryptoGraphyTests.swift */,
 				AFDDB93B26447FCE00565346 /* extentionTests.swift */,
 				AFDDB95E2644849D00565346 /* MnemonicTests.swift */,
+				AFB582902651B5E800E1567C /* keychainTests.swift */,
 			);
 			path = walletTests;
 			sourceTree = "<group>";
@@ -526,6 +532,7 @@
 				AFBFD9D82641E25F004A8D86 /* Mnemonic.swift in Sources */,
 				AFF6FC462640845900B80F5A /* walletApp.swift in Sources */,
 				AF0AF4562642E066007E5202 /* Address.swift in Sources */,
+				AFB582882651B49B00E1567C /* KeychainWrapper.swift in Sources */,
 				AFDDB9252644677200565346 /* WalletViewModel.swift in Sources */,
 				AF6154922640898B0070410C /* RecoverWalletView.swift in Sources */,
 				AFDDB9322644709100565346 /* DashboardView.swift in Sources */,
@@ -538,6 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB582912651B5E800E1567C /* keychainTests.swift in Sources */,
 				AFDDB93C26447FCE00565346 /* extentionTests.swift in Sources */,
 				AFF6FC582640845B00B80F5A /* walletTests.swift in Sources */,
 				AFDDB9372644772200565346 /* cryptoGraphyTests.swift in Sources */,

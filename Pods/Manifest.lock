@@ -1,16 +1,20 @@
 PODS:
   - BIP39 (1.0.0)
+  - SwiftKeychainWrapper (4.0.1)
 
 DEPENDENCIES:
   - BIP39
+  - SwiftKeychainWrapper
 
 SPEC REPOS:
   trunk:
     - BIP39
+    - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   BIP39: 77b2205e0e79a61ae251a33fd2f38d02ed935728
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
 
-PODFILE CHECKSUM: b2edbbd27de4aae076b7cfb4c63e729a666d201a
+PODFILE CHECKSUM: 1c00df249affd3e69a8803a8b57e5079a0e644f8
 
 COCOAPODS: 1.10.1

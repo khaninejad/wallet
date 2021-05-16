@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-wallet/Pods-wallet-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/BIP39/BIP39.framework
+${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework
