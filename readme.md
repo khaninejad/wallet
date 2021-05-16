@@ -5,7 +5,7 @@
 
 Next developments:
 
- - Implement Apple CryptoKit
+ - Implement Apple keychain
  - Save & recover using mnemonic words 
  - First send / receive transactions
  - Get transaction lists
