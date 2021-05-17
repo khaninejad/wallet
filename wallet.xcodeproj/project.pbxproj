@@ -18,6 +18,7 @@
 		AF6154922640898B0070410C /* RecoverWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6154912640898B0070410C /* RecoverWalletView.swift */; };
 		AF990C662641650A00DF8730 /* BLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF990C652641650A00DF8730 /* BLS.swift */; };
 		AF990C6C26416E5F00DF8730 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF990C6B26416E5F00DF8730 /* CryptoSwift */; };
+		AFAC849D2652CEB20065928F /* UserLoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAC849C2652CEB20065928F /* UserLoginViewModelTests.swift */; };
 		AFB582882651B49B00E1567C /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB582872651B49B00E1567C /* KeychainWrapper.swift */; };
 		AFB582912651B5E800E1567C /* keychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB582902651B5E800E1567C /* keychainTests.swift */; };
 		AFBFD9D82641E25F004A8D86 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFD9D72641E25F004A8D86 /* Mnemonic.swift */; };
@@ -82,6 +83,7 @@
 		AF615484264089230070410C /* CreateWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletView.swift; sourceTree = "<group>"; };
 		AF6154912640898B0070410C /* RecoverWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverWalletView.swift; sourceTree = "<group>"; };
 		AF990C652641650A00DF8730 /* BLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLS.swift; sourceTree = "<group>"; };
+		AFAC849C2652CEB20065928F /* UserLoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewModelTests.swift; sourceTree = "<group>"; };
 		AFB582872651B49B00E1567C /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		AFB582902651B5E800E1567C /* keychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keychainTests.swift; sourceTree = "<group>"; };
 		AFBFD9D72641E25F004A8D86 /* Mnemonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
@@ -203,6 +205,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AFAC849B2652CE9D0065928F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AFAC849C2652CEB20065928F /* UserLoginViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		AFDDB94026447FFD00565346 /* Ext */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +269,7 @@
 		AFF6FC562640845B00B80F5A /* walletTests */ = {
 			isa = PBXGroup;
 			children = (
+				AFAC849B2652CE9D0065928F /* ViewModels */,
 				AFF6FC572640845B00B80F5A /* walletTests.swift */,
 				AFF6FC592640845B00B80F5A /* Info.plist */,
 				AFDDB9362644772200565346 /* cryptoGraphyTests.swift */,
@@ -550,6 +561,7 @@
 				AFF6FC582640845B00B80F5A /* walletTests.swift in Sources */,
 				AFDDB9372644772200565346 /* cryptoGraphyTests.swift in Sources */,
 				AFDDB95F2644849D00565346 /* MnemonicTests.swift in Sources */,
+				AFAC849D2652CEB20065928F /* UserLoginViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

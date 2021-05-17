@@ -11,12 +11,15 @@ struct ContentView: View {
     @ObservedObject private var userLoginVM = UserLoginViewModel()
    
     init() {
-        if (userLoginVM.loginState){
-            
-        }
+        
     }
     var body: some View {
-      return  LoginView()
+        if (userLoginVM.loginState){
+             DashboardView()
+        }else{
+            LoginView()
+        }
+        
     }
 }
 
