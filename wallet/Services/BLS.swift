@@ -50,12 +50,14 @@ class BLS {
         let mem = Mnemonic()
         return  try! mem.GenerateMnemonic(hex: input)
     }
+    func RecoverMnemonic(input: [String]) -> String {
+        let mem = Mnemonic()
+        return   mem.GenerateSecretFromMnemonic(words: input)
+    }
     func GenerateKeys()  {     
        var sec = GenerateSecretKey()
         self.publicKey = GeneratePublicKey(sec: &sec)
         self.mnemonicWords = GenerateMnemonic(input: self.secretKey)
-
-        
     }
     
 }

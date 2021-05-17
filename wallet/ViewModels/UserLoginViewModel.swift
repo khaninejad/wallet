@@ -24,6 +24,7 @@ class UserLoginViewModel : ObservableObject {
     }
     
     func validateKeyExists()-> Bool{
+        loadKeys()
         if(self.privateKey != nil){
             return true
         }

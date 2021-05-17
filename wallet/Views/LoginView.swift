@@ -44,7 +44,7 @@ struct LoginView: View {
             Button(action: {
                
             }, label: {
-                NavigationLink(destination: CreateWalletView()) {
+                NavigationLink(destination: RecoverWalletView()) {
                      Text("Recover Wallet")
                  }
             }).accessibility(identifier: "recoverAWallet")

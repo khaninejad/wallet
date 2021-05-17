@@ -22,7 +22,7 @@ class WalletViewModel : ObservableObject {
         
         
         self.keys.publicKey = blsObject.publicKey
-        self.keys.secretKey = blsObject.secretKey
+        setPrivateKey(privateKey: blsObject.secretKey)
         self.keys.mnemonicWords = blsObject.mnemonicWords
         
         SaveKeys();
@@ -32,13 +32,35 @@ class WalletViewModel : ObservableObject {
         let keychain = Keychain.init()
         let privateKeySaveResult =    keychain.saveKey(key: "privateKey", value: self.keys.secretKey)
         let publicKeySaveResult =  keychain.saveKey(key: "publicKey", value: self.keys.publicKey)
-        
         if (privateKeySaveResult == true && publicKeySaveResult == true){
             self.created = true;
         }
     }
+    func RecoverKeys(words: [String]){
+        do {
+            if (words.count != 24) {
+                throw AppErrorException.InvalidWordCount
+            }
+            let secretKey =   BLS.init().RecoverMnemonic(input: words)
+            setPrivateKey(privateKey: secretKey)
+            
+            SaveKeys()
+            
+        } catch AppErrorException.InvalidWordCount {
+            print("InvalidWordCount")
+        }
+        catch {
+            print("Unexpected, not otherwise caught, error: \(error)")
+        }
+    }
+    func setPrivateKey(privateKey: String){
+        self.keys.secretKey = privateKey
+    }
+    
     
 }
+
+
 
 
 
