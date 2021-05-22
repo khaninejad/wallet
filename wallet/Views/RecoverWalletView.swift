@@ -8,31 +8,8 @@
 import SwiftUI
 
 struct RecoverWalletView: View {
-//    @State private var words = [String](repeating: "", count:23)
-    @State private var words = ["comic",
-                                   "yard",
-                                   "general",
-                                   "scout",
-                                   "fork",
-                                    "unit",
-                                   "feed",
-                                    "dawn",
-                                    "unlock",
-                                    "broken",
-                                    "appear",
-                                    "ready",
-                                   "salmon",
-                                   "topple",
-                                    "dragon",
-                                    "follow",
-                                     "embrace",
-                                   "prize",
-                                     "lawsuit",
-                                    "horse",
-                                     "bulb",
-                                     "bullet",
-                                    "table",
-                                     "wait"]
+    @State private var words = [String](repeating: "", count:23)
+
     var body: some View {
         VStack {
         

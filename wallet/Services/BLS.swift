@@ -30,33 +30,61 @@ class BLS {
         let SECRET_KEY_SIZE = 32
         var secretKeyBytes = Data(count: SECRET_KEY_SIZE).bytes // [UInt8]
         blsSecretKeySerialize(&secretKeyBytes, SECRET_KEY_SIZE, &sec)
-        let secretString = Data(secretKeyBytes).hexEncodedString()
-        secretKey = secretString
+        self.secretKey = secretKeyBytes.toHexString()
         
         return sec
     }
-    func GeneratePublicKey(sec: inout blsSecretKey) -> String {
+    func GeneratePublicKey(sec: inout blsSecretKey) -> blsPublicKey {
         var pub = blsPublicKey.init()
         blsGetPublicKey(&pub, &sec);
         
+//
         let PUBLIC_KEY_SIZE = 96
         var publicKeyBytes = Data(count: PUBLIC_KEY_SIZE).bytes // [UInt8]
         blsPublicKeySerialize(&publicKeyBytes, PUBLIC_KEY_SIZE, &pub)
-        return Data(publicKeyBytes).hexEncodedString()
-        
+        self.publicKey = publicKeyBytes.toHexString()
+
+        return pub
         
     }
+    func GeneratePublicKey(key: String) -> String {
+        init_BLS()
+
+        var serializedSecretKey = Data(hex: key).bytes // [UInt8]
+
+        var secretKey = blsSecretKey.init()
+        blsSecretKeyDeserialize(&secretKey, &serializedSecretKey, numericCast(serializedSecretKey.count))
+        
+        var publicKey = blsPublicKey.init()
+        blsGetPublicKey(&publicKey, &secretKey)
+        
+        let PUBLIC_KEY_SIZE = 96
+        var publicKeyBytes = Data(count: PUBLIC_KEY_SIZE).bytes // [UInt8]
+        blsPublicKeySerialize(&publicKeyBytes, PUBLIC_KEY_SIZE, &publicKey)
+        self.publicKey = publicKeyBytes.toHexString()
+        return self.publicKey
+
+     
+    }
+    
+    
     func GenerateMnemonic(input: String ) -> [String] {
         let mem = Mnemonic()
-        return  try! mem.GenerateMnemonic(hex: input)
+        let words = try! mem.GenerateMnemonic(hex: input)
+        print (words)
+        return words
     }
     func RecoverMnemonic(input: [String]) -> String {
         let mem = Mnemonic()
+        
         return   mem.GenerateSecretFromMnemonic(words: input)
     }
     func GenerateKeys()  {     
        var sec = GenerateSecretKey()
-        self.publicKey = GeneratePublicKey(sec: &sec)
+       GeneratePublicKey(sec: &sec)
+
+        
+        //self.publicKey = GeneratePublicKey(sec: &sec)
         self.mnemonicWords = GenerateMnemonic(input: self.secretKey)
     }
     
