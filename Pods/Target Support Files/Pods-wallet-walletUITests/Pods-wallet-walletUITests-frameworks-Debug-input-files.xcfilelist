@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-wallet-walletUITests/Pods-wallet-walletUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/BIP39/BIP39.framework
+${BUILT_PRODUCTS_DIR}/CBOR/CBOR.framework
 ${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework

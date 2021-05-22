@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DashboardView: View {
+    private var obj = CBORWrapper.init()
+    @State private var showTransactionSheet = false
     var body: some View {
         
         VStack {
@@ -15,6 +17,27 @@ struct DashboardView: View {
             Spacer()
             
             Text("$ " + Float.random(in: 1...1000).rounded().description + " Balance")
+            
+            HStack {
+                
+            
+            Button(action: {
+                self.showTransactionSheet = true
+            }) {
+                HStack {
+                    Image(systemName: "arrow.up.square.fill")
+                        Text("Send")
+                    }
+                
+                   
+            }
+            .padding()
+            .foregroundColor(.white)
+            .background(Color.gray)
+            .cornerRadius(.infinity)
+                
+                Spacer()
+            }.padding()
             
             HStack {
                 Rectangle()
@@ -42,6 +65,8 @@ struct DashboardView: View {
             }
 
             
+        }.sheet(isPresented: self.$showTransactionSheet) {
+            NewTransaction()
         }
         
     }

@@ -71,7 +71,5 @@ struct KeysViewModel: Decodable {
     var publicKey: String = ""
     var mnemonicWords = [String]()
     
-    
-    
 }
 
