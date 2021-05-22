@@ -35,7 +35,13 @@ class UserLoginViewModel : ObservableObject {
         setPrivateKey(value: keychain.getKey(key: "privateKey"))
     }
     func setPrivateKey(value: String?){
-        self.privateKey = value
+        if( value != nil){
+            let keychain = Keychain.init()
+            self.privateKey = value
+            _ =  keychain.saveKey(key: "privateKey", value: value!)
+        }
+        
+
     }
     
 }

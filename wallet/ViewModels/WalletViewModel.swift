@@ -44,7 +44,7 @@ class WalletViewModel : ObservableObject {
             let secretKey =   BLS.init().RecoverMnemonic(input: words)
             setPrivateKey(privateKey: secretKey)
             let publicKey = BLS.init().GeneratePublicKey(key:  secretKey)
-            //todo: Generate the public Key using string
+            
             
             SaveKeys()
             
