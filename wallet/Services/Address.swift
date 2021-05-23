@@ -17,13 +17,13 @@ class Address {
         return SHA256.hash(data: data).data
     }
     
-    func GenerateAddress(publicAddress : String){
+    func GenerateAddress(publickey : String) -> String{
         
-        let digest = GenerateSHA256(input: publicAddress)
+        let digest = GenerateSHA256(input: publickey)
         
         print(digest.hexEncodedString()) // B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9
        let hash160 = GenerateHash160(hash256: digest.hexEncodedString())
-        GenerateBech32(hex: hash160, hrp: "zrb")
+       return GenerateBech32(hex: hash160, hrp: "zrb")
     }
     func GenerateHash160(hash256: String) -> Data{
         let hash = RIPEMD160.hash(message: hash256)

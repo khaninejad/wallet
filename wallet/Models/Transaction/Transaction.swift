@@ -14,26 +14,26 @@ public protocol CBOREncodable {
 
 struct Transaction: CBOREncodable {
     var Version: Int
-    var  Stamp   :  String
+    var  Stamp   :  [UInt8]
     var  Sequence :  Int
     var  Fee    :   Int
     var  TypeT    :  PayloadType
     var  Payload : SendPayload
     var  Memo   :   String
-    var  PublicKey : String
-    var  Signature : String
+    var  PublicKey : [UInt8]
+    var  Signature : [UInt8]
 
     public func encode() -> [UInt8] {
         let cborWrapper : CBOR = [
             "1": CBOR(integerLiteral: self.Version),
-            "2": CBOR.utf8String(self.Stamp),
+            "2": CBOR.byteString(self.Stamp),
             "3": CBOR(integerLiteral: self.Sequence),
             "4": CBOR(integerLiteral: self.Fee),
             "6": try!  CBOR.decode( self.Payload.encode())!,
             "5": CBOR(integerLiteral: self.TypeT.getvalue()),
             "7": CBOR.utf8String(self.Memo),
-            "20": CBOR.utf8String(self.PublicKey),
-            "21": CBOR.utf8String(self.Signature)
+            "20": CBOR.byteString(self.PublicKey),
+            "21": CBOR.byteString(self.Signature)
         ]
         return cborWrapper.encode()
     }

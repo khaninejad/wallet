@@ -7,13 +7,18 @@
 
 import Foundation
 class CBORWrapper {
+    private var sendPayload = SendPayload(sender: [0x40], reciever: [0x40], amount: 0)
     init() {
-        let send = SendPayload(Sender: "zrbdjdjjdd", Receiver: "zrbkkdskjdkjd", Amount: 10)
-        let trans =  Transaction(Version: 1, Stamp: "stamp", Sequence: 50, Fee: 10, TypeT: PayloadType.PayloadTypeSend, Payload: send, Memo: "mem", PublicKey: "54s5df45sdf45sd4f5s4df", Signature: "hsjdhfhjasgdfhasgdfhjgsdf").encode()
         
-        let bond = BondPayload(Bonder: "zrb", Validator: "validatir", Stake: 10).encode()
-        print(trans.toHexString())
-     
-        print(bond.toHexString())
+
+    }
+    func setSendPayload(sender: String, reciver: String, amount: Int){
+        
+        self.sendPayload = SendPayload(sender: sender.bytes, reciever: reciver.bytes, amount: amount)
+        
+    }
+    func setTransactionPayload(publicKey: String, signature: String, latestBlockStamp: String, numberOfSenderTransaction: Int, fee: Int, memo: String)-> String{
+        let trans =  Transaction(Version: 1, Stamp: latestBlockStamp.bytes, Sequence: numberOfSenderTransaction, Fee: fee, TypeT: PayloadType.PayloadTypeSend, Payload: self.sendPayload, Memo: memo, PublicKey: publicKey.bytes, Signature: signature.bytes).encode()
+        return trans.toHexString()
     }
 }

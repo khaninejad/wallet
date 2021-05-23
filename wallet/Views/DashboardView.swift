@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DashboardView: View {
-    private var obj = CBORWrapper.init()
+    
     @State private var showTransactionSheet = false
     var body: some View {
         

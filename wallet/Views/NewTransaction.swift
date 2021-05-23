@@ -13,11 +13,11 @@ struct NewTransaction: View {
         VStack{
             
             TextField("Recipient Address", text: self.$transactionVM.SendTransaction.RecieverAddress)
-            TextField("Amount", value: self.$transactionVM.SendTransaction.Amount, formatter: NumberFormatter())
+            TextField("Amount", text: self.$transactionVM.SendTransaction.Amount)
             TextField("Memo ", text: self.$transactionVM.SendTransaction.Memo)
             
             Button(action: {
-               
+                transactionVM.Send()
             }, label: {
                 NavigationLink(destination: RecoverWalletView()) {
                      Text("Send")
