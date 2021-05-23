@@ -33,9 +33,9 @@ class WalletViewModel : ObservableObject {
         let keychain = Keychain.init()
         let privateKeySaveResult =    keychain.saveKey(key: "privateKey", value: self.keys.secretKey)
         let publicKeySaveResult =  keychain.saveKey(key: "publicKey", value: self.keys.publicKey)
-        let address = Address.init().GenerateAddress(publickey: self.keys.publicKey)
-        let addressSaveResult =  keychain.saveKey(key: "address", value:  self.keys.publicKey)
-        if (privateKeySaveResult == true && publicKeySaveResult == true){
+        let address = AddressWrapper.init().GenerateAddress(publickey: self.keys.publicKey)
+        let addressSaveResult =  keychain.saveKey(key: "address", value:  address)
+        if (privateKeySaveResult == true && publicKeySaveResult == true && addressSaveResult == true){
             self.created = true;
         }
     }

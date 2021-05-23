@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DashboardView: View {
-    
+    @ObservedObject private var balanceVM = BalanceViewModel()
     @State private var showTransactionSheet = false
     var body: some View {
         
@@ -16,7 +16,7 @@ struct DashboardView: View {
             Text("Zarb Dashboard")
             Spacer()
             
-            Text("$ " + Float.random(in: 1...1000).rounded().description + " Balance")
+            Text("z \(balanceVM.balance?.realBalance ?? 0) Balance")
             
             HStack {
                 

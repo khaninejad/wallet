@@ -9,7 +9,7 @@ import Foundation
 import CryptoKit
 
 
-class Address {
+class AddressWrapper {
     
     func GenerateSHA256(input: String) -> Data {
         
@@ -21,7 +21,7 @@ class Address {
         
         let digest = GenerateSHA256(input: publickey)
         
-        print(digest.hexEncodedString()) // B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9
+        print(digest.hexEncodedString()) 
        let hash160 = GenerateHash160(hash256: digest.hexEncodedString())
        return GenerateBech32(hex: hash160, hrp: "zrb")
     }
