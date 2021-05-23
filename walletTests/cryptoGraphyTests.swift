@@ -38,7 +38,7 @@ class cryptoGraphyTests: XCTestCase {
     }
     
     func testGenerateSH256() {
-        let sh256 = Address()
+        let sh256 = AddressWrapper()
         let data = sh256.GenerateSHA256(input: "zarb")
         let hex =   data.hexEncodedString()
         XCTAssertEqual(data.count, 32)
@@ -50,7 +50,7 @@ class cryptoGraphyTests: XCTestCase {
 
     }
     func testGenerateHash160() {
-        let hash160 = Address()
+        let hash160 = AddressWrapper()
         XCTAssertEqual(hash160.GenerateHash160(hash256: "").count, 20)
         XCTAssertEqual(hash160.GenerateHash160(hash256: "").hexEncodedString(), "9c1185a5c5e9fc54612808977ee8f548b2258d31")
         XCTAssertEqual(hash160.GenerateHash160(hash256: "a").hexEncodedString(), "0bdc9d2d256b3ee9daae347be6f4dc835a467ffe")
@@ -61,7 +61,7 @@ class cryptoGraphyTests: XCTestCase {
     }
     
     func testGenerateBech32() {
-        let hash160 = Address()
+        let hash160 = AddressWrapper()
         XCTAssertEqual(hash160.GenerateBech32(hex:Data(hex: "f6edd7e1d53d730a3ae0d44e6b6ce5dc102c0b63"),  hrp: "zrb"), "zrb17mka0cw484es5whq638xkm89msgzczmrwy64dy")
 
 
