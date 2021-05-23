@@ -17,9 +17,9 @@ struct BondPayload: CBOREncodable {
 
     public func encode() -> [UInt8] {
         let cborWrapper : CBOR = [
-            "Bonder": CBOR.utf8String(self.Bonder),
-            "Validator": CBOR.utf8String(self.Validator),
-            "Stake": CBOR(integerLiteral: self.Stake)
+            "1": CBOR.utf8String(self.Bonder),
+            "2": CBOR.utf8String(self.Validator),
+            "3": CBOR(integerLiteral: self.Stake)
         ]
         return cborWrapper.encode()
     }

@@ -16,9 +16,9 @@ struct SendPayload: CBOREncodable {
 
     public func encode() -> [UInt8] {
         let cborWrapper : CBOR = [
-            "Sender": CBOR.utf8String(self.Sender),
-            "Receiver": CBOR.utf8String(self.Receiver),
-            "Amount": CBOR(integerLiteral: self.Amount)
+            "1": CBOR.utf8String(self.Sender),
+            "2": CBOR.utf8String(self.Receiver),
+            "3": CBOR(integerLiteral: self.Amount)
         ]
         return cborWrapper.encode()
     }

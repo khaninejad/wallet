@@ -25,15 +25,15 @@ struct Transaction: CBOREncodable {
 
     public func encode() -> [UInt8] {
         let cborWrapper : CBOR = [
-            "Version": CBOR(integerLiteral: self.Version),
-            "Stamp": CBOR.utf8String(self.Stamp),
-            "Sequence": CBOR(integerLiteral: self.Sequence),
-            "Fee": CBOR(integerLiteral: self.Fee),
-            "Payload": try!  CBOR.decode( self.Payload.encode())!,
-            "Type": CBOR(integerLiteral: self.TypeT.getvalue()),
-            "Memo": CBOR.utf8String(self.Memo),
-            "PublicKey": CBOR.utf8String(self.PublicKey),
-            "Signature": CBOR.utf8String(self.Signature)
+            "1": CBOR(integerLiteral: self.Version),
+            "2": CBOR.utf8String(self.Stamp),
+            "3": CBOR(integerLiteral: self.Sequence),
+            "4": CBOR(integerLiteral: self.Fee),
+            "6": try!  CBOR.decode( self.Payload.encode())!,
+            "5": CBOR(integerLiteral: self.TypeT.getvalue()),
+            "7": CBOR.utf8String(self.Memo),
+            "20": CBOR.utf8String(self.PublicKey),
+            "21": CBOR.utf8String(self.Signature)
         ]
         return cborWrapper.encode()
     }
