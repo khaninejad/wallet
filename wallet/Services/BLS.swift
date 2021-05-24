@@ -12,6 +12,7 @@ import CryptoSwift
 class BLS {
     var secretKey = String()
     var publicKey = String()
+    var signature = String()
     var mnemonicWords = [String]()
 
     
@@ -63,6 +64,46 @@ class BLS {
         blsPublicKeySerialize(&publicKeyBytes, PUBLIC_KEY_SIZE, &publicKey)
         self.publicKey = publicKeyBytes.toHexString()
         return self.publicKey
+
+     
+    }
+    func getSecretKeyFromHex(key: String) -> blsSecretKey{
+        init_BLS()
+
+        var serializedSecretKey = Data(hex: key).bytes // [UInt8]
+
+        var secretKey = blsSecretKey.init()
+        blsSecretKeyDeserialize(&secretKey, &serializedSecretKey, numericCast(serializedSecretKey.count))
+        return secretKey
+    }
+    func Serialize(msg: String, secretkey: String) -> String {
+        init_BLS()
+        
+        var serializedSecretKey = Data(hex: secretkey).bytes // [UInt8]
+
+        var secretKey = blsSecretKey.init()
+        blsSecretKeyDeserialize(&secretKey, &serializedSecretKey, numericCast(serializedSecretKey.count))
+        
+        var publicKey = blsPublicKey.init()
+        blsGetPublicKey(&publicKey, &secretKey)
+
+        var sig = blsSignature.init()
+        var serializedMsg = msg.bytes
+        let msgSize = serializedMsg.count
+
+       blsSign(&sig, &secretKey, serializedMsg, msgSize);
+        
+        let Sign_KEY_SIZE = 48
+        var SignBytes = Data(count: Sign_KEY_SIZE).bytes // [UInt8]
+        blsSignatureSerialize(&SignBytes, Sign_KEY_SIZE, &sig)
+        
+        
+        
+        let res =  blsVerify(&sig, &publicKey, serializedMsg, msgSize);
+        
+        self.signature = SignBytes.toHexString()
+        print(SignBytes.toHexString())
+        return self.signature
 
      
     }
