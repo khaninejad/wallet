@@ -41,6 +41,12 @@
 		AFE2BDEA2659912A00FDD105 /* SortitionPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2BDE92659912A00FDD105 /* SortitionPayload.swift */; };
 		AFE2BDF42659A02600FDD105 /* NewTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2BDF32659A02600FDD105 /* NewTransaction.swift */; };
 		AFE2BDFC2659A15400FDD105 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2BDFB2659A15400FDD105 /* TransactionViewModel.swift */; };
+		AFE5616C265BFD07007E38ED /* BlockChainHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5616B265BFD07007E38ED /* BlockChainHeight.swift */; };
+		AFE56171265C229D007E38ED /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE56170265C229D007E38ED /* Block.swift */; };
+		AFE56175265C22A3007E38ED /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE56174265C22A3007E38ED /* Header.swift */; };
+		AFE56179265C22A9007E38ED /* LastCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE56178265C22A9007E38ED /* LastCertificate.swift */; };
+		AFE5617D265C22AE007E38ED /* TxIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5617C265C22AE007E38ED /* TxIDs.swift */; };
+		AFE56181265C22C4007E38ED /* BlockChainHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE56180265C22C4007E38ED /* BlockChainHash.swift */; };
 		AFF6FC462640845900B80F5A /* walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC452640845900B80F5A /* walletApp.swift */; };
 		AFF6FC482640845900B80F5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6FC472640845900B80F5A /* ContentView.swift */; };
 		AFF6FC4A2640845B00B80F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF6FC492640845B00B80F5A /* Assets.xcassets */; };
@@ -118,6 +124,12 @@
 		AFE2BDE92659912A00FDD105 /* SortitionPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortitionPayload.swift; sourceTree = "<group>"; };
 		AFE2BDF32659A02600FDD105 /* NewTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransaction.swift; sourceTree = "<group>"; };
 		AFE2BDFB2659A15400FDD105 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		AFE5616B265BFD07007E38ED /* BlockChainHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainHeight.swift; sourceTree = "<group>"; };
+		AFE56170265C229D007E38ED /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		AFE56174265C22A3007E38ED /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		AFE56178265C22A9007E38ED /* LastCertificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastCertificate.swift; sourceTree = "<group>"; };
+		AFE5617C265C22AE007E38ED /* TxIDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TxIDs.swift; sourceTree = "<group>"; };
+		AFE56180265C22C4007E38ED /* BlockChainHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockChainHash.swift; sourceTree = "<group>"; };
 		AFF6FC422640845900B80F5A /* wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF6FC452640845900B80F5A /* walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletApp.swift; sourceTree = "<group>"; };
 		AFF6FC472640845900B80F5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -260,6 +272,7 @@
 		AFD9E655265AF2DF008BE050 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				AFE5616F265C2287007E38ED /* BlockChain */,
 				AFD9E656265AF2ED008BE050 /* Address.swift */,
 			);
 			path = API;
@@ -271,6 +284,19 @@
 				AFDDB9412644800E00565346 /* Ext+Data.swift */,
 			);
 			path = Ext;
+			sourceTree = "<group>";
+		};
+		AFE5616F265C2287007E38ED /* BlockChain */ = {
+			isa = PBXGroup;
+			children = (
+				AFE56180265C22C4007E38ED /* BlockChainHash.swift */,
+				AFE56170265C229D007E38ED /* Block.swift */,
+				AFE5616B265BFD07007E38ED /* BlockChainHeight.swift */,
+				AFE56174265C22A3007E38ED /* Header.swift */,
+				AFE56178265C22A9007E38ED /* LastCertificate.swift */,
+				AFE5617C265C22AE007E38ED /* TxIDs.swift */,
+			);
+			path = BlockChain;
 			sourceTree = "<group>";
 		};
 		AFF6FC392640845900B80F5A = {
@@ -596,6 +622,7 @@
 				AF615480264088900070410C /* LoginView.swift in Sources */,
 				AF990C662641650A00DF8730 /* BLS.swift in Sources */,
 				AF615485264089230070410C /* CreateWalletView.swift in Sources */,
+				AFE56175265C22A3007E38ED /* Header.swift in Sources */,
 				AFF6FC482640845900B80F5A /* ContentView.swift in Sources */,
 				AFD9E657265AF2ED008BE050 /* Address.swift in Sources */,
 				AFE2BDF42659A02600FDD105 /* NewTransaction.swift in Sources */,
@@ -603,11 +630,16 @@
 				AFBFD9D82641E25F004A8D86 /* Mnemonic.swift in Sources */,
 				AFF6FC462640845900B80F5A /* walletApp.swift in Sources */,
 				AF0AF4562642E066007E5202 /* AddressWrapper.swift in Sources */,
+				AFE5617D265C22AE007E38ED /* TxIDs.swift in Sources */,
 				AFB582882651B49B00E1567C /* KeychainWrapper.swift in Sources */,
+				AFE56171265C229D007E38ED /* Block.swift in Sources */,
 				AFE2BDDE26598DCC00FDD105 /* CBORWrapper.swift in Sources */,
 				AFDDB9252644677200565346 /* WalletViewModel.swift in Sources */,
+				AFE5616C265BFD07007E38ED /* BlockChainHeight.swift in Sources */,
 				AF6154922640898B0070410C /* RecoverWalletView.swift in Sources */,
 				AFAC84A3265309950065928F /* AppErrorException.swift in Sources */,
+				AFE56181265C22C4007E38ED /* BlockChainHash.swift in Sources */,
+				AFE56179265C22A9007E38ED /* LastCertificate.swift in Sources */,
 				AFDDB9322644709100565346 /* DashboardView.swift in Sources */,
 				AF0AF46126432018007E5202 /* Bech32.swift in Sources */,
 				AFDDB9422644800E00565346 /* Ext+Data.swift in Sources */,

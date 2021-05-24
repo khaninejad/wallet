@@ -63,7 +63,76 @@ class APIService {
             
         }.resume()
             
-        
-        
     }
+    
+    func getBlockChainHeight(completion: @escaping (BlockChainHeight?) -> ()){
+       
+        let request = generateRequest(baseUrl: base, endpointUrl: "/blockchain/", methodType: "GET", methodBody:  nil, requestToken: nil)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data,let httpResponse = response as? HTTPURLResponse, error == nil else{
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+                return
+            }
+            
+            guard 200 ..< 300 ~= httpResponse.statusCode else {
+                print("Status code was \(httpResponse.statusCode), but expected 2xx" )
+                  return
+              }
+            
+            
+            let blockchainHeightReponse = try? JSONDecoder().decode(BlockChainHeight.self, from: data)
+            
+            if let blockchainHeightReponse = blockchainHeightReponse{
+                DispatchQueue.main.async {
+                    completion(blockchainHeightReponse)
+                }
+            }
+            
+            
+        }.resume()
+            
+    }
+    
+    ///
+    
+    func getBlockChainHeightHash(height: Int, completion: @escaping (BlockChainHash?) -> ()){
+       
+        let request = generateRequest(baseUrl: base, endpointUrl: "/block/height/\(height)", methodType: "GET", methodBody:  nil, requestToken: nil)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data,let httpResponse = response as? HTTPURLResponse, error == nil else{
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+                return
+            }
+            
+            guard 200 ..< 300 ~= httpResponse.statusCode else {
+                print("Status code was \(httpResponse.statusCode), but expected 2xx" )
+                  return
+              }
+            
+            
+            let blockchainHeightReponse = try? JSONDecoder().decode(BlockChainHash.self, from: data)
+            
+            if let blockchainHeightReponse = blockchainHeightReponse{
+                DispatchQueue.main.async {
+                    completion(blockchainHeightReponse)
+                }
+            }
+            
+            
+        }.resume()
+            
+    }
+    
+    
+    
+    
+    
+    
+    
 }
