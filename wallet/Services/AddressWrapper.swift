@@ -7,22 +7,25 @@
 
 import Foundation
 import CryptoKit
-
+import Blake2
 
 class AddressWrapper {
     
-    func GenerateSHA256(input: String) -> Data {
+    func GenerateSHA256(input: String) -> String {
         
-        guard let data = input.data(using: .utf8) else { return Data.init()}
-        return SHA256.hash(data: data).data
+
+        let data = Data(input.utf8)
+        let hash = try! Blake2.hash(.b2b, size: 32, data: data)
+        return hash.toHexString()
     }
+    
     
     func GenerateAddress(publickey : String) -> String{
         
         let digest = GenerateSHA256(input: publickey)
         
-        print(digest.hexEncodedString()) 
-       let hash160 = GenerateHash160(hash256: digest.hexEncodedString())
+
+       let hash160 = GenerateHash160(hash256: digest)
        return GenerateBech32(hex: hash160, hrp: "zrb")
     }
     func GenerateHash160(hash256: String) -> Data{

@@ -1,24 +1,28 @@
 PODS:
   - BIP39 (1.0.0)
+  - Blake2 (0.1.2)
   - CBOR (0.2.0)
   - SwiftKeychainWrapper (4.0.1)
 
 DEPENDENCIES:
   - BIP39
+  - Blake2 (~> 0.1)
   - CBOR (~> 0.2)
   - SwiftKeychainWrapper
 
 SPEC REPOS:
   trunk:
     - BIP39
+    - Blake2
     - CBOR
     - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   BIP39: 77b2205e0e79a61ae251a33fd2f38d02ed935728
+  Blake2: f33072b13349da1b8048a2bf26a3a24d4eac6dcc
   CBOR: f1117a073b831a9a55afefe36f4e29fb258571cb
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
 
-PODFILE CHECKSUM: fc1cd5929b6c38665628f576d4775cc28e752766
+PODFILE CHECKSUM: 421d4b9ca45671d3952b870ef650f4f69d8ec6a9
 
 COCOAPODS: 1.10.1
