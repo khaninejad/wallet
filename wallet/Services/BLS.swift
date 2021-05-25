@@ -76,7 +76,7 @@ class BLS {
         blsSecretKeyDeserialize(&secretKey, &serializedSecretKey, numericCast(serializedSecretKey.count))
         return secretKey
     }
-    func Serialize(msg: String, secretkey: String) -> String {
+    func Sign(msg: String, secretkey: String) -> String {
         init_BLS()
         
         var serializedSecretKey = Data(hex: secretkey).bytes // [UInt8]
