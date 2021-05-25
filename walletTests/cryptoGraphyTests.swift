@@ -34,12 +34,22 @@ class cryptoGraphyTests: XCTestCase {
         let bls_test = BLS()
         let publicKey = bls_test.GeneratePublicKey(key: "d0c6a560de2e60b6ac55386defefdf93b0c907290c2ad1b4dbd3338186bfdc68")
         XCTAssertEqual(publicKey, "37bfe636693eac0b674ae6603442192ef0432ad84384f0cec8bea5f63c9f45c29bf085b8b9b7f069ae873ccefe61a50a59ad3fefd729af5d63e9cb2325a8f064ab2514b3f846dbfded53234800603a9e752422ad48b99f835bcd95df945aac93")
+       
         
+    }
+    func testAddressGenerateFromScratch(){
+        let bls_test = BLS()
+        let publicKey2 = bls_test.GeneratePublicKey(key: "79d8747b47287faf786e9d12")
+        let obj = AddressWrapper()
+        let blake2 = obj.GenerateSHA256(input:publicKey2)
+        let hash160 = obj.GenerateHash160(hash256: blake2)
+        let address = obj.GenerateBech32(hex: hash160,  hrp: "zrb")
+        XCTAssertEqual( address, "zrb1h9acqh3echsup7mlxt5jdvq4sfzjrnuz9cwpye")
     }
     func testsignatureSerialize(){
         let bls_test = BLS()
        
-      let serialized =  bls_test.Serialize(msg: "zarb", secretkey: "d0c6a560de2e60b6ac55386defefdf93b0c907290c2ad1b4dbd3338186bfdc68")
+        let serialized =  bls_test.Sign(msg: "zarb", secretkey: "d0c6a560de2e60b6ac55386defefdf93b0c907290c2ad1b4dbd3338186bfdc68")
         XCTAssertEqual(serialized, "5f1080090499741fb94f8b5022f0f75650cf9f3cd1d235fe7440bc772ac63d5cc246405f424214ebc1af814bdcca7882")
         
     }

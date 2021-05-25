@@ -13,7 +13,7 @@ class AddressWrapper {
     
     func GenerateSHA256(input: String) -> String {
         
-
+        
         let data = Data(input.utf8)
         let hash = try! Blake2.hash(.b2b, size: 32, data: data)
         return hash.toHexString()
@@ -24,14 +24,14 @@ class AddressWrapper {
         
         let digest = GenerateSHA256(input: publickey)
         
-
-       let hash160 = GenerateHash160(hash256: digest)
-       return GenerateBech32(hex: hash160, hrp: "zrb")
+        
+        let hash160 = GenerateHash160(hash256: digest)
+        return GenerateBech32(hex: hash160, hrp: "zrb")
     }
     func GenerateHash160(hash256: String) -> Data{
         let hash = RIPEMD160.hash(message: hash256)
         return hash
-       
+        
     }
     func GenerateBech32(hex: Data, hrp: String) -> String{
         
